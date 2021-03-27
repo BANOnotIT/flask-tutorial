@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book['Title'] }}</title>
+</head>
+<body>
+<h1>
+    {{ book['Title'] }}
+</h1>
+<dl>
+    <dt>Author</dt>
+    <dd>{{ book['Author'] }}</dd>
+    {% if pd.notna(book['Publisher']) %}
+        <dt>Publisher</dt>
+        <dd>{{ book['Publisher'] }}</dd>
+    {% endif %}
+</dl>
+</body>
+</html>
