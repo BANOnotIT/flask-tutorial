@@ -3,6 +3,7 @@ from flask import Flask, request, render_template, jsonify, Response
 import pandas as pd
 
 books = pd.read_csv('books.csv')
+app = Flask(__name__)
 
 
 def linkify(books):
@@ -10,8 +11,6 @@ def linkify(books):
 
 
 linkify(books)
-
-app = Flask(__name__)
 
 
 def login_required(func):
